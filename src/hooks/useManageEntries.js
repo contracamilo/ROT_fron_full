@@ -1,12 +1,8 @@
 import { useState, useCallback } from 'react';
 import axios from 'axios';
 
-const { REACT_APP_API_URL, NODE_ENV } = process.env;
+const { REACT_APP_API_URL } = process.env;
 let apiUrl = REACT_APP_API_URL;
-
-if (NODE_ENV !== 'development') {
-  apiUrl = process.env.REACT_APP_PROD_API_URL;
-}
 
 const useManageEntries = ({ payload, headers, route, id = '' }) => {
   const [data, setData] = useState({ data: [] });
