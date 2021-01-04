@@ -31,9 +31,10 @@ function Votes() {
         </div>
       ) : (
         <div className="votes__card-container">
-          {(peopleState || []).map((person, index) => (
-            <Card key={index} person={person} dispatch={passDispatch} personKey={index} />
-          ))}
+          {peopleState &&
+            peopleState.map((person, index) => (
+              <Card key={index} person={person} dispatch={passDispatch} personKey={index} />
+            ))}
         </div>
       )}
     </article>
