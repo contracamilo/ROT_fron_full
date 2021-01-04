@@ -15,7 +15,6 @@ const Banner = ({ type, texts, action }) => {
   const [isclosed, setIsClosed] = useState(false);
 
   const closeBanner = () => {
-    console.log('lk');
     setIsClosed(true);
   };
 

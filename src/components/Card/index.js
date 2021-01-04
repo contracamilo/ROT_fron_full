@@ -75,7 +75,6 @@ const Card = ({ person = {}, dispatch, personKey }) => {
   useEffect(() => {
     if (isEdited) {
       editEntry();
-      console.log('I sended');
       setIsEdited(false);
     }
   }, [editEntry, isEdited, updatedValues]);
